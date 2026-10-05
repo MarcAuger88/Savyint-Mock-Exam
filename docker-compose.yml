@@ -1,0 +1,17 @@
+services:
+  saviynt-exam-trainer:
+    build: .
+    image: saviynt-exam-trainer:latest
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+      HOSTNAME: 0.0.0.0
+      QUIZ_DATABASE_PATH: /app/data/quiz-attempts.sqlite
+    volumes:
+      - saviynt-exam-data:/app/data
+    restart: unless-stopped
+
+volumes:
+  saviynt-exam-data:

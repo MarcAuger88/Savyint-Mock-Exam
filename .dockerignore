@@ -1,0 +1,13 @@
+.git
+.claude
+.next
+coverage
+node_modules
+npm-debug.log*
+Dockerfile
+docker-compose.yml
+.env*
+data/*.sqlite
+data/*.sqlite-*
+*.tsbuildinfo
+README.md
